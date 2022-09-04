@@ -1,6 +1,4 @@
 {
-  "expo": {
-    "name": "udemy",
-    "slug": "udemy"
-  }
+  "name": "udemy",
+  "displayName": "udemy"
 }
