@@ -1,20 +1,22 @@
 import React from 'react'
 import {Text, StyleSheet, View} from 'react-native'
+import SafeAreaView from './src/components/SafeAreaView'
 
 const styl = StyleSheet.create({
   main: {
     flex: 1,
-    padding: 24,
     alignItems: 'center',
-    marginTop: 55,
+    backgroundColor: 'red',
   },
 })
 
 const Root = () => {
   return (
-    <View style={styl.main}>
-      <Text>Hello Tsx</Text>
-    </View>
+    <SafeAreaView>
+      <View style={styl.main}>
+        <Text>Hello Tsx</Text>
+      </View>
+    </SafeAreaView>
   )
 }
 
