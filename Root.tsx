@@ -1,10 +1,11 @@
 import React from 'react'
 import SafeAreaView from './src/components/SafeAreaView'
-import Demo from './src/views/001.demo'
+import Styl from './src/views/001.styl'
+
 const Root = () => {
   return (
     <SafeAreaView>
-      <Demo />
+      <Styl />
     </SafeAreaView>
   )
 }
