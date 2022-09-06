@@ -28,6 +28,7 @@ const styl02 = StyleSheet.create({
   main: {
     backgroundColor: 'tomato',
     justifyContent: 'center',
+    flexDirection: 'row',
   },
 })
 
