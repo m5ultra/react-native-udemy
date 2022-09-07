@@ -1,9 +1,13 @@
 import React from 'react'
-import {View, StyleSheet, TouchableOpacity, Text} from 'react-native'
+import {View, StyleSheet, TouchableOpacity, Text, Alert} from 'react-native'
 
 export const CustomButton = () => (
   <View style={styles.container}>
-    <TouchableOpacity style={styles.customBtnBG} onPress={() => {}}>
+    <TouchableOpacity
+      style={styles.customBtnBG}
+      onPress={() => {
+        Alert.alert('Hello')
+      }}>
       <Text style={styles.customBtnText}>自定义按钮</Text>
     </TouchableOpacity>
   </View>
