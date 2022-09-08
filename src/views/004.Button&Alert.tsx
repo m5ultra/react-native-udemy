@@ -13,6 +13,7 @@ const Demo04 = () => (
 
       <Button
         title="Press me"
+        color={'red'}
         onPress={() => Alert.alert('Simple Button pressed')}
       />
     </View>

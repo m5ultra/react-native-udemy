@@ -6,7 +6,23 @@ export const CustomButton = () => (
     <TouchableOpacity
       style={styles.customBtnBG}
       onPress={() => {
-        Alert.alert('Hello')
+        Alert.alert('警告标题', '警告内容警告内容警告内容', [
+          {
+            text: '稍后在试',
+            onPress: () => console.log('Ask me later pressed'),
+            style: 'destructive',
+          },
+          {
+            text: '取消',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel',
+          },
+          {
+            text: '确定',
+            style: 'default',
+            onPress: () => console.log('OK Pressed'),
+          },
+        ])
       }}>
       <Text style={styles.customBtnText}>自定义按钮</Text>
     </TouchableOpacity>
