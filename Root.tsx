@@ -7,8 +7,9 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/005.Switch&StatusBar'
 // import Index from './src/views/006.ActivityIndicator'
 // import Index from './src/views/007.Image'
-import Index from './src/views/008.TextInput'
-
+// import Index from './src/views/008.TextInput'
+// import Index from './src/views/009.touchable'
+import Index from './src/views/010.ScrollView'
 const Root = () => {
   return (
     <SafeAreaView>

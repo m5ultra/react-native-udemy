@@ -13,11 +13,13 @@ const Demo08 = () => {
   const [text, onChangeText] = useState('Useless Text')
   const [number, onChangeNumber] = useState('')
   let [desc, setDesc] = useState('')
+  let [inputRef] = useState<TextInput | null>(null)
 
   const handleBtnClick = () => {
     console.log(text)
     console.log(number)
     console.log('desc', desc)
+    console.log(inputRef?.focus(), 'input')
   }
 
   const handleDescChange = (
@@ -29,6 +31,7 @@ const Demo08 = () => {
   const handleDescChange2 = (val: string) => {
     console.log(val)
   }
+  // @ts-ignore
   return (
     <View style={styl.main}>
       <TextInput
@@ -59,6 +62,7 @@ const Demo08 = () => {
         numberOfLines={5}
       />
       <TextInput
+        ref={textInput => (inputRef = textInput)}
         style={styl.textarea}
         placeholder={'请输入描述信息02'}
         onChangeText={val => handleDescChange2(val)}
