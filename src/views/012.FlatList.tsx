@@ -78,7 +78,9 @@ const Demo12 = () => {
 
   const renderItem = ({item, index}: {item: ItemType; index: number}) => {
     return (
-      <TouchableOpacity onPress={() => handleItemClick(index)}>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={() => handleItemClick(index)}>
         <Item title={item.title} index={index} />
       </TouchableOpacity>
     )
