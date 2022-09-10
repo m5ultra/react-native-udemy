@@ -10,7 +10,8 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/008.TextInput'
 // import Index from './src/views/009.touchable'
 // import Index from './src/views/010.ScrollView'
-import Index from './src/views/011.SectionList'
+// import Index from './src/views/011.SectionList'
+import Index from './src/views/012.FlatList'
 
 const Root = () => {
   return (
