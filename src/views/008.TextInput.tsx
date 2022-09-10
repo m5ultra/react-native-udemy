@@ -37,14 +37,16 @@ const Demo08 = () => {
         placeholder="Please Input UserName"
         onChangeText={onChangeText}
         value={text}
+        keyboardAppearance={'dark'}
         clearButtonMode={'always'}
+        keyboardType={'phone-pad'}
       />
       <TextInput
         style={styl.input}
         onChangeText={onChangeNumber}
         value={number}
         placeholder="请输入密码"
-        keyboardType="numeric"
+        keyboardType={'default'}
         clearButtonMode="while-editing"
         secureTextEntry={true}
       />
