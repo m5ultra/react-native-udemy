@@ -16,10 +16,7 @@ const Demo010 = () => {
   ]
   return (
     <View>
-      <ScrollView
-        style={{marginBottom: 10}}
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {list.map(({label, id}, idx) => (
           <Text
             style={[styl.item, list.length === idx + 1 ? null : styl.mr]}
@@ -1740,6 +1737,7 @@ export default Demo010
 const styl = StyleSheet.create({
   main: {
     marginHorizontal: 10,
+    paddingTop: 10,
   },
   item: {
     width: 100,
