@@ -68,7 +68,10 @@ const Demo12 = () => {
   const Item = ({title, index}: titleType) => (
     <View style={styles.item}>
       <Text style={styles.title}>
-        {title} + {index} + {selIdx}
+        {title}
+        <Text>
+          {index} + {selIdx}
+        </Text>
       </Text>
     </View>
   )
@@ -106,7 +109,6 @@ const Demo12 = () => {
         initialScrollIndex={0} // 列表滚动到那个位置 IOS好像无效
         initialNumToRender={4} // 先加载前4条 可以指定第一屏幕自动加载
         numColumns={0} // 多列 不支持瀑布流
-        extraData={selIdx}
       />
     </SafeAreaView>
   )
