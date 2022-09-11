@@ -22,7 +22,7 @@ export default function Demo17() {
   }
 
   useEffect(() => {
-    readItemFromStorage()
+    readItemFromStorage().then().catch()
   }, [readItemFromStorage])
 
   return (
