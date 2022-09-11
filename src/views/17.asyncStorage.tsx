@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react'
-import {View, Text, Button} from 'react-native'
+import {View, Text, Button, Platform} from 'react-native'
 import {useAsyncStorage} from '@react-native-async-storage/async-storage'
 
 export default function Demo17() {
@@ -12,7 +12,11 @@ export default function Demo17() {
   }, [getItem])
 
   const writeItemToStorage = async (newValue: string) => {
-    console.log(newValue, 'newVal')
+    if (Platform.OS === 'ios') {
+      console.log(newValue, 'ios')
+    } else {
+      console.log(newValue, 'android')
+    }
     await setItem(newValue)
     setValue(newValue)
   }
