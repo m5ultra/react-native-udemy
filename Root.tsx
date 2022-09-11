@@ -15,7 +15,8 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/013.Animated'
 // import Index from './src/views/014.WebView/014.1.WebView'
 // import Index from './src/views/014.WebView/014.2.WebView'
-import Index from './src/views/015.Pick'
+// import Index from './src/views/015.Pick'
+import Index from './src/views/016.swiper'
 
 const Root = () => {
   return (
