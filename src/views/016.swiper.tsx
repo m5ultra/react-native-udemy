@@ -25,6 +25,7 @@ export default Demo16
 const styl = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: 'green',
   },
 })
 

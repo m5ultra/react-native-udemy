@@ -12,6 +12,7 @@
     "devTools": "react-devtools"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-native-picker/picker": "^2.4.4",
     "react": "18.0.0",
     "react-native": "0.69.5",
