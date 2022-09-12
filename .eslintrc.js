@@ -13,6 +13,7 @@ module.exports = {
         semi: 'off',
         'react/react-in-jsx-scope': 'off',
         'react-native/no-inline-styles': 'off',
+        'no-extra-semi': 'off',
       },
     },
   ],
