@@ -359,6 +359,10 @@ PODS:
   - RNCPicker (2.4.4):
     - React-Core
   - SocketRocket (0.6.0)
+  - VisionCamera (2.14.1):
+    - React
+    - React-callinvoker
+    - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -423,6 +427,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
+  - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -514,6 +519,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNCPicker:
     :path: "../node_modules/@react-native-picker/picker"
+  VisionCamera:
+    :path: "../node_modules/react-native-vision-camera"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -567,9 +574,10 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 0c357f3156fcb16c8589ede67cc036330b6698ca
   RNCPicker: 0b65be85fe7954fbb2062ef079e3d1cde252d888
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  VisionCamera: cc788935bcfd2f7031d3295adedbc9786835f402
   Yoga: c2b1f2494060865ac1f27e49639e72371b1205fa
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: e791d2bf737587ad7705e9d0cfddc581c9cce5a1
+PODFILE CHECKSUM: 2ea9be27ae6da609cf1dee36d6230e60f5023405
 
 COCOAPODS: 1.11.3

@@ -18,7 +18,8 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/015.Pick'
 // import Index from './src/views/016.swiper'
 // import Index from './src/views/17.asyncStorage'
-import Index from './src/views/18.GeoLocation'
+// import Index from './src/views/18.GeoLocation'
+import Index from './src/views/19.Camera'
 
 const Root = () => {
   return (
