@@ -3,7 +3,7 @@ import {View, Text, Button} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
-function HomeScreen({navigation}) {
+function HomeScreen({navigation, router}: any) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Home Screen</Text>
@@ -26,7 +26,7 @@ const Stack = createNativeStackNavigator()
 function stackNav() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName={'Home'}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailScreen} />
       </Stack.Navigator>
