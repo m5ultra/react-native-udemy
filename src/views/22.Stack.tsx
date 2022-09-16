@@ -1,15 +1,24 @@
 import * as React from 'react'
 import {View, Text, Button} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import {
+  createNativeStackNavigator,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack'
 
-function HomeScreen({navigation, router}: any) {
+type RootStackParamList = {
+  Home: undefined
+  Details: {GoodsId: string}
+}
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>
+function HomeScreen({navigation, route}: Props) {
+  console.log(route, 'v')
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Home Screen</Text>
       <Button
         title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('Details', {GoodsId: 'Nul.778899'})}
       />
     </View>
   )
@@ -21,14 +30,18 @@ function DetailScreen() {
     </View>
   )
 }
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 function stackNav() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={'Home'}>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailScreen} />
+        <Stack.Screen
+          initialParams={{GoodsId: 'Nul.1122334455'}}
+          name="Details"
+          component={DetailScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
