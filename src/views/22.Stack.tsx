@@ -11,6 +11,7 @@ type RootStackParamList = {
   Details: {GoodsId: string}
 }
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>
+
 function HomeScreen({navigation, route}: Props) {
   console.log(route, 'v')
   return (
@@ -35,7 +36,13 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 function stackNav() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={'Home'}>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+        }}
+        initialRouteName={'Home'}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
           initialParams={{GoodsId: 'Nul.1122334455'}}
