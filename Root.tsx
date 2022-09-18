@@ -22,8 +22,11 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/19.Camera'
 // import Index from './src/views/20.ImagePick'
 // import Index from './src/views/21.CustomComponent'
-import Index from './src/views/22.Stack'
-
+// import Index from './src/views/22.Navigation/22.0.Starting'
+// import Index from './src/views/22.Navigation/22.1.moveBetween'
+// import Index from './src/views/22.Navigation/22.2.PassingParams'
+// import Index from './src/views/22.Navigation/22.3.PassingParamsPreviousScreen'
+import Index from './src/views/22.Navigation/22.4.ConfHeaderBar'
 const Root = () => {
   return (
     <SafeAreaView>
