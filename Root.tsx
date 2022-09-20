@@ -27,7 +27,8 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/22.Navigation/22.2.PassingParams'
 // import Index from './src/views/22.Navigation/22.3.PassingParamsPreviousScreen'
 // import Index from './src/views/22.Navigation/22.4.ConfHeaderBar'
-import Index from './src/views/22.Navigation/22.5.HeaderBtns'
+// import Index from './src/views/22.Navigation/22.5.HeaderBtns'
+import Index from './src/views/22.Navigation/22.6.NestingNavigators'
 
 const Root = () => {
   return (
