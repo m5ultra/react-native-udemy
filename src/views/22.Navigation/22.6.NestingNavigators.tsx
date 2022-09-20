@@ -7,10 +7,18 @@ const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 const ctx = createContext('testCtx')
 
-const Feed = () => {
+const Feed = ({navigation}) => {
   return (
     <View style={styl.main}>
       <Text>Feed</Text>
+      <Button
+        title={'Messages'}
+        onPress={() => navigation.navigate('Messages')}
+      />
+      <Button
+        title={'Settings'}
+        onPress={() => navigation.navigate('Settings')}
+      />
     </View>
   )
 }
@@ -80,7 +88,7 @@ const Home = ({route}) => {
 const NestingNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Profile">
+      <Stack.Navigator>
         <Stack.Screen
           options={{title: 'MyHome'}}
           name={'Home'}
