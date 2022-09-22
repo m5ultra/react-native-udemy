@@ -1,4 +1,5 @@
 import React from 'react'
+import 'react-native-gesture-handler'
 import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/001.styl'
 // import Index from './src/views/002.flexbox'
