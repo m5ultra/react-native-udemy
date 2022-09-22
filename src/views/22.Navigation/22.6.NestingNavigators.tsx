@@ -88,7 +88,7 @@ const Home = ({route}) => {
 const NestingNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Profile">
         <Stack.Screen
           options={{title: 'MyHome'}}
           name={'Home'}
