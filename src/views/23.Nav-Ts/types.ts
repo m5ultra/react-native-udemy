@@ -1,6 +1,6 @@
 import type {NativeStackNavigationProp} from '@react-navigation/native-stack'
-import type {RouteProp} from '@react-navigation/native'
-
+import type {RouteProp, CompositeNavigationProp} from '@react-navigation/native'
+import type {BottomTabNavigationProp} from '@react-navigation/bottom-tabs'
 export type RootStackNavigatorParamList = {
   Home: undefined
   Details: {
@@ -14,14 +14,20 @@ export type DetailsScreenNavigationProp = NativeStackNavigationProp<
   'Details'
 >
 
-export type HomeScreenNavigationProp = NativeStackNavigationProp<
-  RootStackNavigatorParamList,
-  'Home'
->
-
 export type DetailsScreenRouteProp = RouteProp<
   RootStackNavigatorParamList,
   'Details'
 >
 
 export type HomeScreenRouteProp = RouteProp<RootStackNavigatorParamList, 'Home'>
+
+export type BottomTabNavigatorParamList = {
+  HomeStack: RootStackNavigatorParamList
+  Feed: undefined
+  Settings: undefined
+}
+
+export type HomeScreenNavigationProp = CompositeNavigationProp<
+  NativeStackNavigationProp<RootStackNavigatorParamList, 'Details'>,
+  BottomTabNavigationProp<BottomTabNavigatorParamList, 'Feed'>
+>

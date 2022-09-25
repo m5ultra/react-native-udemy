@@ -70,6 +70,18 @@ const HomeScreen = () => {
 
   return (
     <View style={{flex: 1, paddingTop: 10}}>
+      <Pressable
+        onPress={() => navigation.navigate('Feed')}
+        style={{
+          padding: 8,
+          borderWidth: 1,
+          borderRadius: 4,
+          borderColor: 'red',
+          margin: 12,
+          alignItems: 'center',
+        }}>
+        <Text style={{fontSize: 16, fontWeight: '600'}}>Go to Feed screen</Text>
+      </Pressable>
       <FlatList data={DATA} renderItem={renderListItems} />
     </View>
   )
