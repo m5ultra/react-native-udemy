@@ -1,11 +1,29 @@
-import {StyleSheet, View, Text} from 'react-native'
+import {StyleSheet, View, Text, Button} from 'react-native'
 import React from 'react'
-import {NavigationContainer} from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {createDrawerNavigator} from '@react-navigation/drawer'
+import {NavigationContainer, useNavigation} from '@react-navigation/native'
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack'
+import {
+  createDrawerNavigator,
+  DrawerNavigationProp,
+} from '@react-navigation/drawer'
+import {CompositeNavigationProp} from '@react-navigation/native'
 
-const Stack = createNativeStackNavigator()
-const Drawer = createDrawerNavigator()
+type DrawerParamsList = {
+  Home: undefined
+  Profile: undefined
+  Settings: undefined
+}
+
+type StackParamsList = {
+  Root: DrawerParamsList
+  Feed: undefined
+}
+
+const Stack = createNativeStackNavigator<StackParamsList>()
+const Drawer = createDrawerNavigator<DrawerParamsList>()
 
 const Home = () => {
   return (
@@ -31,11 +49,26 @@ const Settings = () => {
   )
 }
 
+type ProfileScreenNavigationProp = CompositeNavigationProp<
+  DrawerNavigationProp<DrawerParamsList, 'Profile'>,
+  NativeStackNavigationProp<StackParamsList>
+>
+
 const Feed = () => {
+  const navigation = useNavigation<ProfileScreenNavigationProp>()
   return (
     <View style={[styl.main]}>
       <Text style={{color: 'red', fontSize: 20}}>Feed</Text>
       <View style={{width: 40, height: 40, backgroundColor: 'red'}} />
+      <Button
+        title={'Go to Root'}
+        onPress={() =>
+          navigation.navigate('Root', {
+            screen: 'Profile',
+            params: {name: 'Dendi', age: 88},
+          })
+        }
+      />
     </View>
   )
 }
@@ -53,7 +86,7 @@ function Root() {
 const NestNav = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Root">
+      <Stack.Navigator initialRouteName="Feed">
         <Stack.Screen
           name="Root"
           component={Root}
