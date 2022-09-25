@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <RootNavigator />
-      <StatusBar />
+      <StatusBar hidden={false} />
     </>
   )
 }
