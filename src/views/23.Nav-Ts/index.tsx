@@ -1,14 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import {StatusBar} from 'react-native'
 
-const NavTs = () => {
+import RootNavigator from './Navs'
+
+export default function App() {
   return (
-    <View>
-      <Text>NavTs</Text>
-    </View>
+    <>
+      <RootNavigator />
+      <StatusBar />
+    </>
   )
 }
-
-export default NavTs
-
-const styles = StyleSheet.create({})

@@ -31,7 +31,7 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/22.Navigation/22.5.HeaderBtns'
 // import Index from './src/views/22.Navigation/22.6.NestingNavigators'
 // import Index from './src/views/22.Navigation/22.7.NestNav'
-import Index from './src/views/23.Nav-Ts'
+import Index from './src/views/23.Nav-Ts/Navs'
 
 const Root = () => {
   return (
