@@ -44,7 +44,8 @@ const BottomTabs = () => {
         name="Settings"
         component={SettingsScreen}
         options={{
-          title: '设置',
+          headerShown: false,
+          tabBarLabel: '设置',
           tabBarIcon: ({focused}) => {
             const focusedColor = focused ? activeColor : 'gray'
             return <IconSettings size={20} color={focusedColor} />
