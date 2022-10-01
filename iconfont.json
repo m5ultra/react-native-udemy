@@ -1,0 +1,9 @@
+{
+    "symbol_url": "//at.alicdn.com/t/c/font_3683729_qjs030b2nj.js",
+    "use_typescript": true,
+    "save_dir": "./src/icons",
+    "trim_icon_prefix": "icon",
+    "default_icon_size": 20,
+    "local_svgs": ""
+}
+
