@@ -34,7 +34,7 @@ import SafeAreaView from './src/components/SafeAreaView'
 // import Index from './src/views/23.Nav-Ts/Navs'
 // import Index from './src/views/24.VectorIcons'
 
-import Index from './src/views/25.exec'
+import Index from './src/views/25.exec/routes'
 
 const Root = () => {
   return (

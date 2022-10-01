@@ -1,18 +1,19 @@
 import {StyleSheet, Text, View} from 'react-native'
 import React from 'react'
 
-const Exec = () => {
+const Profile = () => {
   return (
     <View style={styl.main}>
-      <Text>Exec</Text>
+      <Text>Profile</Text>
     </View>
   )
 }
 
-export default Exec
+export default Profile
 
 const styl = StyleSheet.create({
   main: {
     flex: 1,
+    backgroundColor: '#F2F2F2',
   },
 })
