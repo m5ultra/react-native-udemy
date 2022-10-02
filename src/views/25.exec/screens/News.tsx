@@ -11,4 +11,4 @@ const News = () => {
 
 export default News
 
-const styl = StyleSheet.create({main: {backgroundColor: 'pink'}})
+const styl = StyleSheet.create({main: {backgroundColor: 'pink', flex: 1}})

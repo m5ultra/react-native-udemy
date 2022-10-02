@@ -17,7 +17,7 @@ const Demo19 = () => {
     })()
   }, [])
   const devices = useCameraDevices()
-  const device = devices.front
+  const device = devices.back
 
   if (device == null) {
     return (
